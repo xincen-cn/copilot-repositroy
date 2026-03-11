@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 聊天助手</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>AI 聊天助手</h1>
+      <div class="model-info" id="modelInfo">
+        <span class="model-label">当前模型：</span>
+        <span class="model-name" id="modelName">GPT-4o (GitHub Copilot)</span>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <button id="saveBtn" class="btn btn-secondary" title="保存对话">
+        💾 保存对话
+      </button>
+      <button id="loadBtn" class="btn btn-secondary" title="加载对话">
+        📂 加载对话
+      </button>
+      <button id="clearBtn" class="btn btn-danger" title="清空对话">
+        🗑️ 清空对话
+      </button>
+      <input type="file" id="fileInput" accept=".json" style="display:none" />
+    </div>
+
+    <div class="chat-window" id="chatWindow"></div>
+
+    <div class="input-area">
+      <textarea
+        id="userInput"
+        placeholder="请输入消息…（Shift+Enter 换行，Enter 发送）"
+        rows="1"
+      ></textarea>
+      <button id="sendBtn" class="btn btn-primary">发送</button>
+    </div>
+
+    <div id="statusBar" class="status-bar"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
